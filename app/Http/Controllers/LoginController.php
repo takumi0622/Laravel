@@ -21,25 +21,4 @@ class LoginController extends Controller
     public function showLogin() {
         return view('login.login');
     }
-
-    //商品一覧画面を表示
-    public function showProduct() {
-        return view('product.ProductList');
-    }
-
-    //ログイン処理
-    public function login(LoginRequest $request) {
-        $credentials = $request->only('email', 'password');
-
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-
-            //商品一覧画面
-            return redirect('showProduct')->with('login_success', 'ログイン成功しました！');
-        }
-
-        return back()->withErrors([
-            'login_error' => 'メールアドレスかパスワードが間違っています',
-        ]);
-    }
 }

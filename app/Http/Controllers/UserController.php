@@ -25,11 +25,7 @@ class UserController extends Controller
 
     // -----------------------------------------------
 
-    /**
-     * ユーザー登録をする処理
-     * 
-     * @return 
-     */
+    // ユーザー登録をする処理
     public function exeStore(UserRegisterRequest $request) 
     {
         

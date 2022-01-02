@@ -2,18 +2,43 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 
 
-class User extends Model
+class User extends Authenticatable
 {
-    //テーブル名
-    protected $table = 'users';
+    use HasFactory, Notifiable;
 
-    //可変項目
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $fillable = [
         'user_name',
         'email',
-        'password'
+        'password',
     ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password',
+    ];
+
+    /**
+     * Emailがマッチしたユーザを返す
+     * @param string $email
+     * @return object 
+     */
+    public function getUserByEmail($email)
+    {
+        return User::where('email', '=', $email)->first();
+    }
 }

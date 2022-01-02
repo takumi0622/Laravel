@@ -121,6 +121,10 @@ return [
         'email' => 'メールアドレス',
         'password' => 'パスワード',
         'password_confirmation' => '確認用パスワード',
+        'product_name' => '商品名',
+        'company_id' => '会社',
+        'comment' => 'コメント',
+        
     ],
 
 ];

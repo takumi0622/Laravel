@@ -8,9 +8,7 @@ use App\Http\Requests\UserRegisterRequest;
 
 class PasswordController extends Controller
 {
-    /**
-     *
-     */
+    //パスワードのハッシュ化処理
     public function passwordValidate(Request $request) {
         $request->user()->fill([
             'password' => Hash::make($request['password'])
