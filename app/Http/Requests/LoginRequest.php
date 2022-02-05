@@ -15,8 +15,7 @@ class LoginRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
-    {
+    public function authorize() {
         return true;
     }
 
@@ -25,8 +24,7 @@ class LoginRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
-    {
+    public function rules() {
         //バリデーション
         return [
             'email' => ['required'],

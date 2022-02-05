@@ -13,53 +13,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use PhpParser\Node\Expr\FuncCall;
 
-class ProductController extends Controller
-{
-    /**
-     * 商品を登録する
-     * 
-     * @return view
-     */
-    // public function exeStore(ProductRegisterRequest $request)
-    // {
-    //     // 商品のデータを受け取る
-    //     $inputs = $request->all();
-
-    //     $image = $request->file('image');
-
-    //     // 画像がアップロードされていれば、storageに保存
-    //     if ($request->hasFile('image')) {
-    //         $path = \Storage::put('/public', $image);
-    //         $path = explode('/', $path);
-    //     } else {
-    //         $path = null;
-    //     }
-
-    //     $product_id = Product::insertGetId([
-    //         'company_id' => $inputs['company_id'],
-    //         'product_name' => $inputs['product_name'],
-    //         'price' => $inputs['price'],
-    //         'stock' => $inputs['stock'],
-    //         'comment' => $inputs['comment'],
-    //         'image' => $path[1],
-    //     ]);
-
-    //     DB::beginTransaction();
-    //     try {
-    //         // 商品を登録
-    //         Product::create($inputs);
-    //         DB::commit();
-    //     } catch (\Throwable $e) {
-    //         DB::rollback();
-    //         abort(500);
-    //     }
-
-    //     \Session::flash('err_msg', '商品を登録しました。');
-    //     return redirect(route('home'));
-    // }
-
-    public function exeStore(ProductRegisterRequest $request)
-    {
+class ProductController extends Controller {
+    public function exeStore(ProductRegisterRequest $request) {
         // 商品のデータを受け取る
         $inputs = $request->all();
         // dd($inputs);
@@ -67,8 +22,7 @@ class ProductController extends Controller
         $image = $request->file('image');
 
         // 画像がアップロードされていれば、storageに保存
-        if ($request->hasFile('image'))
-        {
+        if ($request->hasFile('image')) {
             $path = \Storage::put('/public', $image);
             $path = explode('/', $path);
         } else {
@@ -77,17 +31,17 @@ class ProductController extends Controller
 
         \DB::beginTransaction();
         try {
-        // 商品を登録
-        Product::create([
-            'company_id' => $inputs['company_id'],
-            'product_name' => $inputs['product_name'], 
-            'price' => $inputs['price'],
-            'stock' => $inputs['stock'],
-            'comment' => $inputs['comment'],
-            'image' => $path[1],
-        ]);
-        \DB::commit();
-        } catch(\Throwable $e) {
+            // 商品を登録
+            Product::create([
+                'company_id' => $inputs['company_id'],
+                'product_name' => $inputs['product_name'],
+                'price' => $inputs['price'],
+                'stock' => $inputs['stock'],
+                'comment' => $inputs['comment'],
+                'image' => $path[1],
+            ]);
+            \DB::commit();
+        } catch (\Throwable $e) {
             \DB::rollback();
             abort(500);
         }
@@ -101,8 +55,7 @@ class ProductController extends Controller
     /**
      * 削除処理
      */
-    public function exeDelete($id)
-    {
+    public function exeDelete($id) {
         if (empty($id)) {
             \Session::flash('err_msg', 'データがありません');
             return redirect('home');
@@ -125,8 +78,7 @@ class ProductController extends Controller
      * 
      * @return view
      */
-    public function exeUpdate(ProductRegisterRequest $request)
-    {
+    public function exeUpdate(ProductRegisterRequest $request) {
         // 商品のデータを受け取る
         $inputs = $request->all();
 
@@ -165,5 +117,4 @@ class ProductController extends Controller
         \Session::flash('err_msg', '商品を登録しました。');
         return redirect(route('home'));
     }
-
 }

@@ -8,58 +8,38 @@
                 <h2 class=''>商品一覧</h2>
             </a>
 
-            <!-- 
-            <form action="{{url('/search')}}" method="GET">
-                <div><input type="text" name="keyword" value="{{ $keyword ?? '' }}"></div>
-                <div class="col-sm-auto">
-                    <button type="submit" class="btn btn-primary ">検索</button>
-                </div>
-                <p><input type="submit" value="検索"></p>
-                
-                <div class="form-group row">
-                    <label class="col-sm-2">商品カテゴリ</label>
-                    <div class="col-sm-3">
-                        <select name="categoryId" class="form-control" value="">
-                            <option value="">未選択</option>
-
-                            <option value="">
-                            
-                            </option>
-                        </select>
-                    </div>
-                </div>
-            </form> -->
-
             <!-- 検索バー -->
             <div class="row">
                 <div class="col-sm">
-                    <form method="GET" action="{{url('/search') }}">
+                    <form method="GET">
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">商品名</label>
                             <!--入力-->
                             <div class="col-sm-5">
-                                <input type="text" name="keyword" value="{{ $keyword ?? '' }}">
+                                <input type="text" name="keyword" id="search_keyword" value="">
                             </div>
                             <div class="col-sm-auto">
-                                <button type="submit" class="btn btn-primary ">検索</button>
+                                <button type="button" class="btn btn-primary" id="search_button">検索</button>
                             </div>
                         </div>
                         <!--プルダウンカテゴリ選択-->
                         <div class="form-group row">
                             <label class="col-sm-2">メーカー名</label>
                             <div class="col-sm-3">
-                                <select name="company_name" class="form-control" value="{{ $company_name }}">
+                                <select name="company_name" class="form-control" value="">
                                     <option value="">未選択</option>
 
                                     @foreach($companies as $company)
                                     <option value="{{ $company->id }}">{{ $company->company_name }}</option>
                                     @endforeach
+
                                 </select>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -78,7 +58,7 @@
             <th></th>
         </tr>
         @foreach($products as $product)
-        <tr>
+        <tr class='product_table' id="product_table">
             <td>{{ $product->id }}</td>
             <td><img src="{{ asset('/storage/' . $product->image) }}" class="img-fluid" alt="{{ $product->image }}" width="200" height="200"></td>
             <td>{{ $product->product_name }}</td>

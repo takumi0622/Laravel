@@ -19,11 +19,16 @@ use Illuminate\Support\Facades\Auth;
 //ログイン画面を表示
 Route::get('/', 'LoginController@showLogin')->name('showLogin');
 
-//ログイン処理
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// //ログイン処理
+Route::get('/home', 'LoginController@login')->name('login');
 
-//検索機能
-Route::get('/home', 'HomeController@exeSearch')->name('search');
+//----------------------------------------------------------------------------------
+
+//Ajax処理
+Route::get('/home{search_keyword}', 'AjaxController@exeAjaxSearch')->name('exeAjax'); 
+
+//商品一覧画面を表示
+Route::get('/home', 'HomeController@showHome')->name('home');
 
 //商品登録画面を表示
 ROute::get('/product/create', 'HomeController@showCreate')->name('showCreate');
@@ -35,7 +40,7 @@ Route::get('/product/{id}', 'HomeController@showDetail')->name('showDetail');
 Route::get('/product/edit/{id}', 'HomeController@showEdit')->name('showEdit');
 
 //商品検索
-Route::get('/search', 'HomeController@exeSearch')->name('search');
+// Route::get('/search', 'HomeController@exeSearch')->name('search');
 
 //商品編集
 Route::post('/product/update', 'ProductController@exeUpdate')->name('update');
@@ -46,7 +51,7 @@ Route::post('/product/store', 'ProductController@exeStore')->name('productStore'
 //商品削除
 Route::get('/home/delete/{id}', 'ProductController@exeDelete')->name('delete');
 
-// ----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
 
 //ユーザー新規登録画面を表示
 Route::get('/user/signup_form', 'UserController@showSignup_form')->name('signup');
@@ -54,7 +59,7 @@ Route::get('/user/signup_form', 'UserController@showSignup_form')->name('signup'
 //ユーザー新規登録
 Route::post('/user/store', 'UserController@exeStore')->name('store');
 
-// ----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
 
 Auth::routes();
 
