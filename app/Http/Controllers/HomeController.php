@@ -21,22 +21,23 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct() {
         $this->middleware('auth');
     }
     //----------------------------------------------------------------------
+    
     /**
      * Show the application dashboard.
      * ホーム画面を表示
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(Request $request)
-    {
-        $products = Product::with('company');
+    public function showHome(Request $request) {
+        $products = Product::with('company')->get();
+        $companies = Company::all();
+        
 
-        return view('product.home', ['products' => $products]);        
+        return view('product.home', ['products' => $products, 'companies' => $companies, ]);        
     }
 
     //----------------------------------------------------------------------
@@ -47,8 +48,7 @@ class HomeController extends Controller
      * 
      * @return view
      */
-    public function showDetail($id)
-    {
+    public function showDetail($id) {
         $product = Product::with('company')->find($id);
         // dd($product);
 
@@ -67,8 +67,7 @@ class HomeController extends Controller
      *
      * @return view
      */
-    public function showCreate()
-    {
+    public function showCreate() {
         $products = Company::all();
         return view('product.create', ['products' => $products]);
     }
@@ -81,11 +80,9 @@ class HomeController extends Controller
      * 
      * @return view
      */
-    public function showEdit($id)
-    {
+    public function showEdit($id) {
         $company_names = Company::all();
         $product = Product::find($id);
-
 
         if (is_null($product)) {
             \Session::flash('err_msg', 'データがありません');
@@ -98,8 +95,7 @@ class HomeController extends Controller
     //----------------------------------------------------------------------
 
     //検索機能
-    public function exeSearch(Request $request)
-    {
+    public function exeSearch(Request $request) {
         $companies = Company::all();
 
         //入力される値nameの定義
@@ -123,5 +119,7 @@ class HomeController extends Controller
 
         return view('product.home', ['companies' => $companies], compact('products', 'keyword', 'company_name'),);
     }
+
+    //----------------------------------------------------------------------
 
 }
