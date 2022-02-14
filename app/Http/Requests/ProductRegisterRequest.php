@@ -24,8 +24,7 @@ class ProductRegisterRequest extends FormRequest
      *
      * @return array
      */
-    public function rules(Request $request)
-    {
+    public function rules(Request $request) {
         //バリデーション
         return [
             'product_name' => ['required', 'string', 'max:64'],
@@ -35,13 +34,4 @@ class ProductRegisterRequest extends FormRequest
             'comment' => ['max:255'],
         ];
     }
-
-    // $table->bigIncrements('id');
-    // $table->bigInteger('company_id')->unsigned();
-    // $table->string('product_name');
-    // $table->integer('price');
-    // $table->integer('stock');
-    // $table->text('comment');
-    // $table->string('image_path');
-    // $table->timestamps();
 }

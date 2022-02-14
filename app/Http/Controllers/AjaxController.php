@@ -14,9 +14,10 @@ class AjaxController extends Controller
     public function exeAjaxSearch($search_keyword) {
 
         $companies = Company::all();
+        $products = Product::all();
         
         //入力される値nameの定義
-        $keyword = Product::where('product_name', 'LIKE', "%$search_keyword%")->get();
+        $keyword = Product::with('Company')->where('product_name', 'LIKE', "%$search_keyword%")->get();
 
         // // $keyword = Product::where('product_name', 'LIKE', "%$search_keyword%")->get(); //商品名
         // // $company_name = $request->input('company_name'); //メーカー名

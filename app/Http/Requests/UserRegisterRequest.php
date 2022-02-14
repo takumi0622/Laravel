@@ -9,15 +9,13 @@ use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\DB;
 
 
-class UserRegisterRequest extends FormRequest
-{
+class UserRegisterRequest extends FormRequest {
     /**
      * Determine if the user is authorized to make this request.
      *
      * @return bool
      */
-    public function authorize()
-    {
+    public function authorize() {
         return true;
     }
 
@@ -26,8 +24,7 @@ class UserRegisterRequest extends FormRequest
      *
      * @return array
      */
-    public function rules(Request $request)
-    {
+    public function rules(Request $request) {
         //バリデーション
         return [
             'user_name' => ['required', 'string', 'max:64'],
@@ -35,7 +32,5 @@ class UserRegisterRequest extends FormRequest
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'password_confirmation' => ['required'],
         ];
-    }
-    
-
+    } 
 }

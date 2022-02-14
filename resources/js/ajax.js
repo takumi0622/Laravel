@@ -7,7 +7,6 @@ $(function () {
 
         var urls = [
             '/home' + search_keyword,
-            
         ];
         //ここでサーバーに対しての通信を行う。情報の指定（ここではdataに格納）、送信先、データの型（Json）等を記述
         $.ajax({
@@ -16,6 +15,7 @@ $(function () {
             datatype: 'json', //データをJson形式で飛ばす
             data: {
                 keyword: search_keyword,
+
             }
     //     // 通信成功事の処理
         }).done(function (data) {
@@ -25,7 +25,7 @@ $(function () {
                 let product_name = value.product_name;
                 let price = value.price;
                 let stock = value.stock;
-                let company_name = value.company_name;
+                let company_name = value.company->company_name;
                 let img = value.img;
 
             //     viewテンプレート
@@ -47,6 +47,10 @@ $(function () {
                     <td>${price}</td>
                     <td>${stock}</td>
                     <td>${company_name}</td>
+                    <td><button type="button" class="btn btn-primary" onclick=" location.href='/product/${id}' ">詳細</button></td>
+                    <form action="{{ route('delete', $product->id) }}" onsubmit="return checkDelete()">
+                        <td><button type="submit" class="btn btn-primary">削除</button></td>
+                    </form>
                 </tr>
                 `
             })

@@ -32,12 +32,14 @@
                                     @foreach($companies as $company)
                                     <option value="{{ $company->id }}">{{ $company->company_name }}</option>
                                     @endforeach
+
                                 </select>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -55,20 +57,20 @@
             <th></th>
             <th></th>
         </tr>
-            @foreach($products as $product)
-            <tr>
-                <td>{{ $product->id }}</td>
-                <td><img src="{{ asset('/storage/' . $product->image) }}" class="img-fluid" alt="{{ $product->image }}" width="200" height="200"></td>
-                <td>{{ $product->product_name }}</td>
-                <td>{{ $product->price }}</td>
-                <td>{{ $product->stock }}</td>
-                <td>{{ $product->company->company_name }}</td>
-                <td><button type="button" class="btn btn-primary" onclick=" location.href='/product/{{ $product->id }}' ">詳細</button></td>
-                <form action="{{ route('delete', $product->id) }}" onsubmit="return checkDelete()">
-                    <td><button type="submit" class="btn btn-primary">削除</button></td>
-                </form>
-            </tr>
-            @endforeach
+        @foreach($products as $product)
+        <tr class='product_table' id="product_table">
+            <td>{{ $product->id }}</td>
+            <td><img src="{{ asset('/storage/' . $product->image) }}" class="img-fluid" alt="{{ $product->image }}" width="200" height="200"></td>
+            <td>{{ $product->product_name }}</td>
+            <td>{{ $product->price }}</td>
+            <td>{{ $product->stock }}</td>
+            <td>{{ $product->company->company_name }}</td>
+            <td><button type="button" class="btn btn-primary" onclick=" location.href='/product/{{ $product->id }}' ">詳細</button></td>
+            <form action="{{ route('delete', $product->id) }}" onsubmit="return checkDelete()">
+                <td><button type="submit" class="btn btn-primary">削除</button></td>
+            </form>
+        </tr>
+        @endforeach
     </table>
     <table id="append"></table>
 </div>
