@@ -12,10 +12,9 @@ $(function () {
         $.ajax({
             type: 'GET',
             url: urls,
-            datatype: 'json', //データをJson形式で飛ばす
+            datatype: 'json', //データをJson形式で取得
             data: {
                 keyword: search_keyword,
-
             }
     //     // 通信成功事の処理
         }).done(function (data) {
@@ -25,8 +24,8 @@ $(function () {
                 let product_name = value.product_name;
                 let price = value.price;
                 let stock = value.stock;
-                let company_name = value.company->company_name;
-                let img = value.img;
+                let company_name = value.company_name;
+                let img = value.image;
 
             //     viewテンプレート
                 html= `

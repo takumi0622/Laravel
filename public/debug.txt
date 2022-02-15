@@ -1,0 +1,871 @@
+Illuminate\Database\Eloquent\Collection::__set_state(array(
+   'items' => 
+  array (
+    0 => 
+    App\Models\Product::__set_state(array(
+       'table' => 'products',
+       'fillable' => 
+      array (
+        0 => 'product_name',
+        1 => 'company_id',
+        2 => 'price',
+        3 => 'stock',
+        4 => 'comment',
+        5 => 'image',
+      ),
+       'connection' => 'mysql',
+       'primaryKey' => 'id',
+       'keyType' => 'int',
+       'incrementing' => true,
+       'with' => 
+      array (
+      ),
+       'withCount' => 
+      array (
+      ),
+       'preventsLazyLoading' => false,
+       'perPage' => 15,
+       'exists' => true,
+       'wasRecentlyCreated' => false,
+       'escapeWhenCastingToString' => false,
+       'attributes' => 
+      array (
+        'id' => 12,
+        'company_id' => 1,
+        'product_name' => 'test3',
+        'price' => 300,
+        'stock' => 400,
+        'comment' => 'testtext',
+        'image' => 'AgkqKDu5GGKha4kWpCJSIgUhE5wr1N6JadF96SkF.jpg',
+        'created_at' => NULL,
+        'updated_at' => '2021-12-16 21:06:21',
+      ),
+       'original' => 
+      array (
+        'id' => 12,
+        'company_id' => 1,
+        'product_name' => 'test3',
+        'price' => 300,
+        'stock' => 400,
+        'comment' => 'testtext',
+        'image' => 'AgkqKDu5GGKha4kWpCJSIgUhE5wr1N6JadF96SkF.jpg',
+        'created_at' => NULL,
+        'updated_at' => '2021-12-16 21:06:21',
+      ),
+       'changes' => 
+      array (
+      ),
+       'casts' => 
+      array (
+      ),
+       'classCastCache' => 
+      array (
+      ),
+       'dates' => 
+      array (
+      ),
+       'dateFormat' => NULL,
+       'appends' => 
+      array (
+      ),
+       'dispatchesEvents' => 
+      array (
+      ),
+       'observables' => 
+      array (
+      ),
+       'relations' => 
+      array (
+        'Company' => 
+        App\Models\Company::__set_state(array(
+           'table' => 'companies',
+           'fillable' => 
+          array (
+            0 => 'company_name',
+            1 => 'street_address',
+          ),
+           'connection' => 'mysql',
+           'primaryKey' => 'id',
+           'keyType' => 'int',
+           'incrementing' => true,
+           'with' => 
+          array (
+          ),
+           'withCount' => 
+          array (
+          ),
+           'preventsLazyLoading' => false,
+           'perPage' => 15,
+           'exists' => true,
+           'wasRecentlyCreated' => false,
+           'escapeWhenCastingToString' => false,
+           'attributes' => 
+          array (
+            'id' => 1,
+            'company_name' => '有限会社 吉田',
+            'street_address' => '6303788  大分県木村市南区原田町中村6-2-6',
+            'created_at' => '2021-11-28 15:46:57',
+            'updated_at' => '2021-11-28 15:46:57',
+          ),
+           'original' => 
+          array (
+            'id' => 1,
+            'company_name' => '有限会社 吉田',
+            'street_address' => '6303788  大分県木村市南区原田町中村6-2-6',
+            'created_at' => '2021-11-28 15:46:57',
+            'updated_at' => '2021-11-28 15:46:57',
+          ),
+           'changes' => 
+          array (
+          ),
+           'casts' => 
+          array (
+          ),
+           'classCastCache' => 
+          array (
+          ),
+           'dates' => 
+          array (
+          ),
+           'dateFormat' => NULL,
+           'appends' => 
+          array (
+          ),
+           'dispatchesEvents' => 
+          array (
+          ),
+           'observables' => 
+          array (
+          ),
+           'relations' => 
+          array (
+          ),
+           'touches' => 
+          array (
+          ),
+           'timestamps' => true,
+           'hidden' => 
+          array (
+          ),
+           'visible' => 
+          array (
+          ),
+           'guarded' => 
+          array (
+            0 => '*',
+          ),
+        )),
+      ),
+       'touches' => 
+      array (
+      ),
+       'timestamps' => true,
+       'hidden' => 
+      array (
+      ),
+       'visible' => 
+      array (
+      ),
+       'guarded' => 
+      array (
+        0 => '*',
+      ),
+    )),
+  ),
+   'escapeWhenCastingToString' => false,
+))Illuminate\Database\Eloquent\Collection::__set_state(array(
+   'items' => 
+  array (
+    0 => 
+    App\Models\Product::__set_state(array(
+       'table' => 'products',
+       'fillable' => 
+      array (
+        0 => 'product_name',
+        1 => 'company_id',
+        2 => 'price',
+        3 => 'stock',
+        4 => 'comment',
+        5 => 'image',
+      ),
+       'connection' => 'mysql',
+       'primaryKey' => 'id',
+       'keyType' => 'int',
+       'incrementing' => true,
+       'with' => 
+      array (
+      ),
+       'withCount' => 
+      array (
+      ),
+       'preventsLazyLoading' => false,
+       'perPage' => 15,
+       'exists' => true,
+       'wasRecentlyCreated' => false,
+       'escapeWhenCastingToString' => false,
+       'attributes' => 
+      array (
+        'id' => 12,
+        'company_id' => 1,
+        'product_name' => 'test3',
+        'price' => 300,
+        'stock' => 400,
+        'comment' => 'testtext',
+        'image' => 'AgkqKDu5GGKha4kWpCJSIgUhE5wr1N6JadF96SkF.jpg',
+        'created_at' => NULL,
+        'updated_at' => '2021-12-16 21:06:21',
+      ),
+       'original' => 
+      array (
+        'id' => 12,
+        'company_id' => 1,
+        'product_name' => 'test3',
+        'price' => 300,
+        'stock' => 400,
+        'comment' => 'testtext',
+        'image' => 'AgkqKDu5GGKha4kWpCJSIgUhE5wr1N6JadF96SkF.jpg',
+        'created_at' => NULL,
+        'updated_at' => '2021-12-16 21:06:21',
+      ),
+       'changes' => 
+      array (
+      ),
+       'casts' => 
+      array (
+      ),
+       'classCastCache' => 
+      array (
+      ),
+       'dates' => 
+      array (
+      ),
+       'dateFormat' => NULL,
+       'appends' => 
+      array (
+      ),
+       'dispatchesEvents' => 
+      array (
+      ),
+       'observables' => 
+      array (
+      ),
+       'relations' => 
+      array (
+        'Company' => 
+        App\Models\Company::__set_state(array(
+           'table' => 'companies',
+           'fillable' => 
+          array (
+            0 => 'company_name',
+            1 => 'street_address',
+          ),
+           'connection' => 'mysql',
+           'primaryKey' => 'id',
+           'keyType' => 'int',
+           'incrementing' => true,
+           'with' => 
+          array (
+          ),
+           'withCount' => 
+          array (
+          ),
+           'preventsLazyLoading' => false,
+           'perPage' => 15,
+           'exists' => true,
+           'wasRecentlyCreated' => false,
+           'escapeWhenCastingToString' => false,
+           'attributes' => 
+          array (
+            'id' => 1,
+            'company_name' => '有限会社 吉田',
+            'street_address' => '6303788  大分県木村市南区原田町中村6-2-6',
+            'created_at' => '2021-11-28 15:46:57',
+            'updated_at' => '2021-11-28 15:46:57',
+          ),
+           'original' => 
+          array (
+            'id' => 1,
+            'company_name' => '有限会社 吉田',
+            'street_address' => '6303788  大分県木村市南区原田町中村6-2-6',
+            'created_at' => '2021-11-28 15:46:57',
+            'updated_at' => '2021-11-28 15:46:57',
+          ),
+           'changes' => 
+          array (
+          ),
+           'casts' => 
+          array (
+          ),
+           'classCastCache' => 
+          array (
+          ),
+           'dates' => 
+          array (
+          ),
+           'dateFormat' => NULL,
+           'appends' => 
+          array (
+          ),
+           'dispatchesEvents' => 
+          array (
+          ),
+           'observables' => 
+          array (
+          ),
+           'relations' => 
+          array (
+          ),
+           'touches' => 
+          array (
+          ),
+           'timestamps' => true,
+           'hidden' => 
+          array (
+          ),
+           'visible' => 
+          array (
+          ),
+           'guarded' => 
+          array (
+            0 => '*',
+          ),
+        )),
+      ),
+       'touches' => 
+      array (
+      ),
+       'timestamps' => true,
+       'hidden' => 
+      array (
+      ),
+       'visible' => 
+      array (
+      ),
+       'guarded' => 
+      array (
+        0 => '*',
+      ),
+    )),
+  ),
+   'escapeWhenCastingToString' => false,
+))Illuminate\Database\Eloquent\Collection::__set_state(array(
+   'items' => 
+  array (
+    0 => 
+    App\Models\Product::__set_state(array(
+       'table' => 'products',
+       'fillable' => 
+      array (
+        0 => 'product_name',
+        1 => 'company_id',
+        2 => 'price',
+        3 => 'stock',
+        4 => 'comment',
+        5 => 'image',
+      ),
+       'connection' => 'mysql',
+       'primaryKey' => 'id',
+       'keyType' => 'int',
+       'incrementing' => true,
+       'with' => 
+      array (
+      ),
+       'withCount' => 
+      array (
+      ),
+       'preventsLazyLoading' => false,
+       'perPage' => 15,
+       'exists' => true,
+       'wasRecentlyCreated' => false,
+       'escapeWhenCastingToString' => false,
+       'attributes' => 
+      array (
+        'id' => 14,
+        'company_id' => 2,
+        'product_name' => 'orange',
+        'price' => 200,
+        'stock' => 50,
+        'comment' => 'testcomment',
+        'image' => 'CqjIDPeUL2ZcfOTf4Bp43hDcRaS9r803ekvbXS1L.jpg',
+        'created_at' => NULL,
+        'updated_at' => NULL,
+      ),
+       'original' => 
+      array (
+        'id' => 14,
+        'company_id' => 2,
+        'product_name' => 'orange',
+        'price' => 200,
+        'stock' => 50,
+        'comment' => 'testcomment',
+        'image' => 'CqjIDPeUL2ZcfOTf4Bp43hDcRaS9r803ekvbXS1L.jpg',
+        'created_at' => NULL,
+        'updated_at' => NULL,
+      ),
+       'changes' => 
+      array (
+      ),
+       'casts' => 
+      array (
+      ),
+       'classCastCache' => 
+      array (
+      ),
+       'dates' => 
+      array (
+      ),
+       'dateFormat' => NULL,
+       'appends' => 
+      array (
+      ),
+       'dispatchesEvents' => 
+      array (
+      ),
+       'observables' => 
+      array (
+      ),
+       'relations' => 
+      array (
+        'Company' => 
+        App\Models\Company::__set_state(array(
+           'table' => 'companies',
+           'fillable' => 
+          array (
+            0 => 'company_name',
+            1 => 'street_address',
+          ),
+           'connection' => 'mysql',
+           'primaryKey' => 'id',
+           'keyType' => 'int',
+           'incrementing' => true,
+           'with' => 
+          array (
+          ),
+           'withCount' => 
+          array (
+          ),
+           'preventsLazyLoading' => false,
+           'perPage' => 15,
+           'exists' => true,
+           'wasRecentlyCreated' => false,
+           'escapeWhenCastingToString' => false,
+           'attributes' => 
+          array (
+            'id' => 2,
+            'company_name' => '株式会社 原田',
+            'street_address' => '4956494  愛媛県大垣市北区中島町加納5-8-2',
+            'created_at' => '2021-11-28 15:46:57',
+            'updated_at' => '2021-11-28 15:46:57',
+          ),
+           'original' => 
+          array (
+            'id' => 2,
+            'company_name' => '株式会社 原田',
+            'street_address' => '4956494  愛媛県大垣市北区中島町加納5-8-2',
+            'created_at' => '2021-11-28 15:46:57',
+            'updated_at' => '2021-11-28 15:46:57',
+          ),
+           'changes' => 
+          array (
+          ),
+           'casts' => 
+          array (
+          ),
+           'classCastCache' => 
+          array (
+          ),
+           'dates' => 
+          array (
+          ),
+           'dateFormat' => NULL,
+           'appends' => 
+          array (
+          ),
+           'dispatchesEvents' => 
+          array (
+          ),
+           'observables' => 
+          array (
+          ),
+           'relations' => 
+          array (
+          ),
+           'touches' => 
+          array (
+          ),
+           'timestamps' => true,
+           'hidden' => 
+          array (
+          ),
+           'visible' => 
+          array (
+          ),
+           'guarded' => 
+          array (
+            0 => '*',
+          ),
+        )),
+      ),
+       'touches' => 
+      array (
+      ),
+       'timestamps' => true,
+       'hidden' => 
+      array (
+      ),
+       'visible' => 
+      array (
+      ),
+       'guarded' => 
+      array (
+        0 => '*',
+      ),
+    )),
+    1 => 
+    App\Models\Product::__set_state(array(
+       'table' => 'products',
+       'fillable' => 
+      array (
+        0 => 'product_name',
+        1 => 'company_id',
+        2 => 'price',
+        3 => 'stock',
+        4 => 'comment',
+        5 => 'image',
+      ),
+       'connection' => 'mysql',
+       'primaryKey' => 'id',
+       'keyType' => 'int',
+       'incrementing' => true,
+       'with' => 
+      array (
+      ),
+       'withCount' => 
+      array (
+      ),
+       'preventsLazyLoading' => false,
+       'perPage' => 15,
+       'exists' => true,
+       'wasRecentlyCreated' => false,
+       'escapeWhenCastingToString' => false,
+       'attributes' => 
+      array (
+        'id' => 16,
+        'company_id' => 4,
+        'product_name' => 'Orange',
+        'price' => 1000,
+        'stock' => 60,
+        'comment' => 'testcomment',
+        'image' => 'OG4aozn1kek5zMkZhtCERY0vr1h3Gmxx9YThvoNZ.jpg',
+        'created_at' => '2021-12-28 13:02:25',
+        'updated_at' => '2021-12-28 13:02:25',
+      ),
+       'original' => 
+      array (
+        'id' => 16,
+        'company_id' => 4,
+        'product_name' => 'Orange',
+        'price' => 1000,
+        'stock' => 60,
+        'comment' => 'testcomment',
+        'image' => 'OG4aozn1kek5zMkZhtCERY0vr1h3Gmxx9YThvoNZ.jpg',
+        'created_at' => '2021-12-28 13:02:25',
+        'updated_at' => '2021-12-28 13:02:25',
+      ),
+       'changes' => 
+      array (
+      ),
+       'casts' => 
+      array (
+      ),
+       'classCastCache' => 
+      array (
+      ),
+       'dates' => 
+      array (
+      ),
+       'dateFormat' => NULL,
+       'appends' => 
+      array (
+      ),
+       'dispatchesEvents' => 
+      array (
+      ),
+       'observables' => 
+      array (
+      ),
+       'relations' => 
+      array (
+        'Company' => 
+        App\Models\Company::__set_state(array(
+           'table' => 'companies',
+           'fillable' => 
+          array (
+            0 => 'company_name',
+            1 => 'street_address',
+          ),
+           'connection' => 'mysql',
+           'primaryKey' => 'id',
+           'keyType' => 'int',
+           'incrementing' => true,
+           'with' => 
+          array (
+          ),
+           'withCount' => 
+          array (
+          ),
+           'preventsLazyLoading' => false,
+           'perPage' => 15,
+           'exists' => true,
+           'wasRecentlyCreated' => false,
+           'escapeWhenCastingToString' => false,
+           'attributes' => 
+          array (
+            'id' => 4,
+            'company_name' => '株式会社 高橋',
+            'street_address' => '9555920  静岡県松本市中央区渡辺町大垣1-5-10 ハイツ藤本102号',
+            'created_at' => '2021-11-28 15:46:57',
+            'updated_at' => '2021-11-28 15:46:57',
+          ),
+           'original' => 
+          array (
+            'id' => 4,
+            'company_name' => '株式会社 高橋',
+            'street_address' => '9555920  静岡県松本市中央区渡辺町大垣1-5-10 ハイツ藤本102号',
+            'created_at' => '2021-11-28 15:46:57',
+            'updated_at' => '2021-11-28 15:46:57',
+          ),
+           'changes' => 
+          array (
+          ),
+           'casts' => 
+          array (
+          ),
+           'classCastCache' => 
+          array (
+          ),
+           'dates' => 
+          array (
+          ),
+           'dateFormat' => NULL,
+           'appends' => 
+          array (
+          ),
+           'dispatchesEvents' => 
+          array (
+          ),
+           'observables' => 
+          array (
+          ),
+           'relations' => 
+          array (
+          ),
+           'touches' => 
+          array (
+          ),
+           'timestamps' => true,
+           'hidden' => 
+          array (
+          ),
+           'visible' => 
+          array (
+          ),
+           'guarded' => 
+          array (
+            0 => '*',
+          ),
+        )),
+      ),
+       'touches' => 
+      array (
+      ),
+       'timestamps' => true,
+       'hidden' => 
+      array (
+      ),
+       'visible' => 
+      array (
+      ),
+       'guarded' => 
+      array (
+        0 => '*',
+      ),
+    )),
+  ),
+   'escapeWhenCastingToString' => false,
+))Illuminate\Database\Eloquent\Collection::__set_state(array(
+   'items' => 
+  array (
+    0 => 
+    App\Models\Product::__set_state(array(
+       'table' => 'products',
+       'fillable' => 
+      array (
+        0 => 'product_name',
+        1 => 'company_id',
+        2 => 'price',
+        3 => 'stock',
+        4 => 'comment',
+        5 => 'image',
+      ),
+       'connection' => 'mysql',
+       'primaryKey' => 'id',
+       'keyType' => 'int',
+       'incrementing' => true,
+       'with' => 
+      array (
+      ),
+       'withCount' => 
+      array (
+      ),
+       'preventsLazyLoading' => false,
+       'perPage' => 15,
+       'exists' => true,
+       'wasRecentlyCreated' => false,
+       'escapeWhenCastingToString' => false,
+       'attributes' => 
+      array (
+        'id' => 12,
+        'company_id' => 1,
+        'product_name' => 'test3',
+        'price' => 300,
+        'stock' => 400,
+        'comment' => 'testtext',
+        'image' => 'AgkqKDu5GGKha4kWpCJSIgUhE5wr1N6JadF96SkF.jpg',
+        'created_at' => NULL,
+        'updated_at' => '2021-12-16 21:06:21',
+      ),
+       'original' => 
+      array (
+        'id' => 12,
+        'company_id' => 1,
+        'product_name' => 'test3',
+        'price' => 300,
+        'stock' => 400,
+        'comment' => 'testtext',
+        'image' => 'AgkqKDu5GGKha4kWpCJSIgUhE5wr1N6JadF96SkF.jpg',
+        'created_at' => NULL,
+        'updated_at' => '2021-12-16 21:06:21',
+      ),
+       'changes' => 
+      array (
+      ),
+       'casts' => 
+      array (
+      ),
+       'classCastCache' => 
+      array (
+      ),
+       'dates' => 
+      array (
+      ),
+       'dateFormat' => NULL,
+       'appends' => 
+      array (
+      ),
+       'dispatchesEvents' => 
+      array (
+      ),
+       'observables' => 
+      array (
+      ),
+       'relations' => 
+      array (
+        'Company' => 
+        App\Models\Company::__set_state(array(
+           'table' => 'companies',
+           'fillable' => 
+          array (
+            0 => 'company_name',
+            1 => 'street_address',
+          ),
+           'connection' => 'mysql',
+           'primaryKey' => 'id',
+           'keyType' => 'int',
+           'incrementing' => true,
+           'with' => 
+          array (
+          ),
+           'withCount' => 
+          array (
+          ),
+           'preventsLazyLoading' => false,
+           'perPage' => 15,
+           'exists' => true,
+           'wasRecentlyCreated' => false,
+           'escapeWhenCastingToString' => false,
+           'attributes' => 
+          array (
+            'id' => 1,
+            'company_name' => '有限会社 吉田',
+            'street_address' => '6303788  大分県木村市南区原田町中村6-2-6',
+            'created_at' => '2021-11-28 15:46:57',
+            'updated_at' => '2021-11-28 15:46:57',
+          ),
+           'original' => 
+          array (
+            'id' => 1,
+            'company_name' => '有限会社 吉田',
+            'street_address' => '6303788  大分県木村市南区原田町中村6-2-6',
+            'created_at' => '2021-11-28 15:46:57',
+            'updated_at' => '2021-11-28 15:46:57',
+          ),
+           'changes' => 
+          array (
+          ),
+           'casts' => 
+          array (
+          ),
+           'classCastCache' => 
+          array (
+          ),
+           'dates' => 
+          array (
+          ),
+           'dateFormat' => NULL,
+           'appends' => 
+          array (
+          ),
+           'dispatchesEvents' => 
+          array (
+          ),
+           'observables' => 
+          array (
+          ),
+           'relations' => 
+          array (
+          ),
+           'touches' => 
+          array (
+          ),
+           'timestamps' => true,
+           'hidden' => 
+          array (
+          ),
+           'visible' => 
+          array (
+          ),
+           'guarded' => 
+          array (
+            0 => '*',
+          ),
+        )),
+      ),
+       'touches' => 
+      array (
+      ),
+       'timestamps' => true,
+       'hidden' => 
+      array (
+      ),
+       'visible' => 
+      array (
+      ),
+       'guarded' => 
+      array (
+        0 => '*',
+      ),
+    )),
+  ),
+   'escapeWhenCastingToString' => false,
+))
