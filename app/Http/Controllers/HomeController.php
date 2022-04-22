@@ -33,8 +33,9 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function showHome(Request $request) {
-        $products = Product::with('company')->get();
+        $products = Product::with('company')->sortable()->get();
         $companies = Company::all();
+        
         
 
         return view('product.home', ['products' => $products, 'companies' => $companies, ]);        
@@ -100,7 +101,7 @@ class HomeController extends Controller
 
         //入力される値nameの定義
         $keyword = $request->input('keyword'); //商品名
-        $company_name = $request->input('company_name'); //メーカー名
+        $company_name = $request->option('company_name'); //メーカー名
 
         //queryビルダ
         $query = Product::query();
@@ -109,13 +110,6 @@ class HomeController extends Controller
         if (!empty($keyword)) {
             $query->where('product_name', 'LIKE', "%{$keyword}%");
         }
-
-        //プルダウン検索機能
-        if (isset($company_name)) {
-            $query->where('company_id', $company_name);
-        }
-
-        $products = $query->get();
 
         return view('product.home', ['companies' => $companies], compact('products', 'keyword', 'company_name'),);
     }

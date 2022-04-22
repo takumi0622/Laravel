@@ -10,6 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
+    <script src="{{ mix('js/delete_product.js') }}"></script>
     <script src="{{ mix('js/ajax.js') }}"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -18,7 +19,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" >  
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 </head>
 <body>
     <div id="app">

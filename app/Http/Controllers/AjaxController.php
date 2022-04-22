@@ -10,17 +10,43 @@ use Illuminate\Support\Facades\Auth;
 
 class AjaxController extends Controller
 {
+    //
+    public function getCompany() {
+        $getCompanyName = Company::pluck('company_name', 'id');
+        return $getCompanyName;
+    }
+    //----------------------------------------------------------------------
+
     //検索機能の非同期処理
-    public function exeAjaxSearch($search_keyword) {
+    public function exeAjaxSearch(Request $request) {
+
+        //queryビルダ
+        $query = Product::query();
+
+        $search_keyword = $request->input('keyword');
+        $company_name = $request->input('company_name');
         
-        //入力される値nameの定義
-        $keyword = Product::with('Company')->where('product_name', 'LIKE', "%$search_keyword%")->get(); //商品名
-        // $company_name = $request->input('company_name'); //メーカー名
+        //商品名で検索する処理
+        
+        $search = Product::with('Company')->where('product_name', 'LIKE', "%$search_keyword%")//商品名
+                                            ->where('company_id', 'LIKE', "%$company_name%")//メーカー名
+                                            ->get();
 
-        error_log(var_export($keyword, true), 3, "./debug.txt");
+        //デバッグテキスト
+        // error_log(var_export($search, true), 3, "./debug.txt");
 
-        return response()->json($keyword);
+        return response()->json($search);
+    }
+    //----------------------------------------------------------------------
 
-        // $product_name = Product::where('product_name', 'LIKE', "%{$keyword}%");
+    //削除機能
+    public function deleteProduct($id) {
+        try {
+            $productModel = new Product;
+            $productModel->deleteProduct($id);
+        } catch (\Throwable $e) {
+            abort(500);
+        }
+        exit();
     }
 }

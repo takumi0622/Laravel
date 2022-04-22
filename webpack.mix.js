@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const { Resolver } = require('laravel-mix/src/Resolver');
 
 /*
  |--------------------------------------------------------------------------
@@ -13,7 +14,9 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/ajax.js', 'public/js')
+    .js('resources/js/delete_product.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/home.scss', 'public/css')
     .sourceMaps()
     .autoload({ 
         "jquery": ['$', 'window.jQuery'],

@@ -19,10 +19,10 @@ class Company extends Model
         'street_address'
     ];
 
-    
-
     // Productsテーブルと関連付ける
     public function products(){
         return $this->hasMany('App\Models\Product');
     }
+
+
 }

@@ -1,5 +1,7 @@
 {
-    "/js/app.js": "/js/app.js?id=20e4246011997ba095ec",
-    "/js/ajax.js": "/js/ajax.js?id=5e091e9286013adca176",
-    "/css/app.css": "/css/app.css?id=34f5f0a5ab4c98afe070"
+    "/js/app.js": "/js/app.js?id=a34cea9b3bd1a60c2499",
+    "/js/ajax.js": "/js/ajax.js?id=e6ed1f41e157e89a3e3c",
+    "/js/delete_product.js": "/js/delete_product.js?id=9a88305ec51d9780c104",
+    "/css/app.css": "/css/app.css?id=34f5f0a5ab4c98afe070",
+    "/css/home.css": "/css/home.css?id=68b329da9893e34099c7"
 }

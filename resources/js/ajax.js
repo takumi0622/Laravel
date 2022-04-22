@@ -1,12 +1,13 @@
 $(function () {
     //検索ボタンクリックで処理が実行
-    $('#search_button').on('click', function () {
+    $('#search_button').on('click', function() {
         $("#product_table").empty(); //product_tableの要素を空にする
 
         var search_keyword = $('#search_keyword').val(); //#search_keywordのフォームに入力された値をsearch_keywordに代入
+        var company_name = $('#company_name').val(); //#company_nameのフォームに入力された値をsearch_companyに代入
 
         var urls = [
-            '/home' + search_keyword,
+            '/home' + search_keyword + company_name,
         ];
         //ここでサーバーに対しての通信を行う。情報の指定（ここではdataに格納）、送信先、データの型（Json）等を記述
         $.ajax({
@@ -15,8 +16,9 @@ $(function () {
             datatype: 'json', //データをJson形式で取得
             data: {
                 keyword: search_keyword,
+                company_name: company_name,
             }
-    //     // 通信成功事の処理
+        // 通信成功事の処理
         }).done(function (data) {
             let html = "";
             $.each(data, function (index, value) {
@@ -24,8 +26,8 @@ $(function () {
                 let product_name = value.product_name;
                 let price = value.price;
                 let stock = value.stock;
-                let company_name = value.company_name;
-                let img = value.image;
+                let company_name = value.company.company_name;
+                let image = value.image;
 
             //     viewテンプレート
                 html= `
@@ -41,7 +43,7 @@ $(function () {
                 </tr>
                 <tr>
                     <td>${id}</td>
-                    <td><img src="${img}" class="img-fluid" width="200" height="200"></td>
+                    <td><img src="/storage/${image}" class="img-fluid" width="200" height="200"></td>
                     <td>${product_name}</td>
                     <td>${price}</td>
                     <td>${stock}</td>

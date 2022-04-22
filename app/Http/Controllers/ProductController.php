@@ -117,4 +117,5 @@ class ProductController extends Controller {
         \Session::flash('err_msg', '商品を登録しました。');
         return redirect(route('home'));
     }
+    //---------------------------------------------------------
 }

@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+//---------------------------------------------------------------------------------
+
 //ログイン画面を表示
 Route::get('/', 'LoginController@showLogin')->name('showLogin');
 
@@ -24,7 +26,9 @@ Route::get('/home', 'LoginController@login')->name('login');
 //----------------------------------------------------------------------------------
 
 //Ajax処理
-Route::get('/home{search_keyword}', 'AjaxController@exeAjaxSearch')->name('exeAjax'); 
+Route::get('/home{search_keyword}', 'AjaxController@exeAjaxSearch')->name('exeAjax');
+
+Route::delete('/home/{id}', 'AjaxController@deleteProduct')->name('delete');
 
 //商品一覧画面を表示
 Route::get('/home', 'HomeController@showHome')->name('home');
@@ -48,7 +52,7 @@ Route::post('/product/update', 'ProductController@exeUpdate')->name('update');
 Route::post('/product/store', 'ProductController@exeStore')->name('productStore');
 
 //商品削除
-Route::get('/home/delete/{id}', 'ProductController@exeDelete')->name('delete');
+// Route::get('/home/{id}', 'ProductController@exeDelete')->name('delete');
 
 //----------------------------------------------------------------------------------
 
